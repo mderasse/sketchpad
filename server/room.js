@@ -105,10 +105,6 @@ Room.prototype = {
         var index = this.clients.indexOf(client);
         this.clients.splice(index, 1);
         console.log(String("room.js").white, String("🚪").red, "user", client.user.user_id, "has left the room");
-        // remove room if is empty
-        if (!this.clients.length) {
-            this.destructor();
-        }
     },
 
     /**
