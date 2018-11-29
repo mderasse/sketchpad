@@ -12,6 +12,7 @@
 	<!-- Dependencies -->
 	<link href="libs/bootstrap.min.css" rel="stylesheet">
 	<link href="libs/fontawesome.min.css" rel="stylesheet">
+	<link href="libs/bootstrap-colorpicker.min.css" rel="stylesheet">
 
 	<!-- Custom -->
 	<link href="css/global.css" rel="stylesheet">
@@ -27,20 +28,20 @@
 				<ul class="file">
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-load" class="col tool button">
 								<i class="fas fa-folder-open"></i>
 							</div>
-							<div class="col">
+							<div id="reset" class="col tool button">
 								<i class="fas fa-trash-alt"></i>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-save" class="col tool button">
 								<i class="fas fa-save"></i>
 							</div>
-							<div class="col">
+							<div id="tool-screenshot" class="col tool button">
 								<i class="fas fa-camera"></i>
 							</div>
 						</div>
@@ -49,27 +50,27 @@
 				<ul class="move">
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-rotate-viewport" class="col tool button">
 								<i class="fas fa-sync"></i>
 							</div>
-							<div class="col">
+							<div id="tool-zoom-1" class="col tool button">
 								<i class="fas fa-home"></i>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-zoom-out" class="col tool button">
 								<i class="fas fa-search-minus"></i>
 							</div>
-							<div class="col">
+							<div id="tool-zoom-in" class="col tool button">
 								<i class="fas fa-search-plus"></i>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-move-viewport" class="col tool button">
 								<i class="fas fa-arrows-alt"></i>
 							</div>
 						</div>
@@ -78,10 +79,10 @@
 				<ul class="history">
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-undo" class="col tool button">
 								<i class="fas fa-undo"></i>
 							</div>
-							<div class="col">
+							<div id="tool-redo" class="col tool button">
 								<i class="fas fa-redo"></i>
 							</div>
 						</div>
@@ -90,58 +91,62 @@
 				<ul class="draw">
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-pen" class="col tool button">
 								<i class="fas fa-pen"></i>
 							</div>
-							<div class="col">
+							<div id="tool-highlighter" class="col tool button">
 								<i class="fas fa-paint-brush"></i>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-rectangle" class="col tool button">
 								<i class="far fa-square"></i>
 							</div>
-							<div class="col">
+							<div id="tool-circle" class="col tool button">
 								<i class="far fa-circle"></i>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-line" class="col tool button">
 								<i class="fas fa-slash"></i>
 							</div>
-							<div class="col">
+							<div id="tool-type" class="col tool button">
 								<i class="fas fa-font"></i>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-rainbow" class="col tool button">
 								<i class="fas fa-magic"></i>
 							</div>
-							<div class="col">
+							<div id="tool-mandala" class="col tool button">
 								<i class="fas fa-star-of-life"></i>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="row">
-							<div class="col">
+							<div id="tool-eraser" class="col tool button">
 								<i class="fas fa-eraser"></i>
 							</div>
-							<div class="col">
+							<div id="tool-cutout" class="col tool button">
 								<i class="fas fa-cut"></i>
 							</div>
 						</div>
 					</li>
 				</ul>
 				<div class="color-squares">
-					<div id="color"></div>
-					<div id="fill-color"></div>
+					<div id="color">
+						<span class="colorpicker-input-addon"><i></i></span>
+					</div>
+					<div id="fill-color">
+						<span class="colorpicker-input-addon"><i></i></span>
+					</div>
 					<div id="switch-color"><i class="fas fa-retweet"></i></div>
 				</div>
 			</nav>
@@ -152,11 +157,14 @@
 	</div>
 
 	<script src="libs/jquery.min.js"></script>
+	<script src="libs/popper.min.js"></script>
 	<script src="libs/bootstrap.min.js"></script>
 	<script src="libs/fontawesome.min.js"></script>
+	<script src="libs/bootstrap-colorpicker.min.js"></script>
 
 	<script src="libs/sketchpad.min.js"></script>
 
+	<script src="js/misc.js"></script>
 	<script src="js/global.js"></script>
 </body>
 

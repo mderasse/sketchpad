@@ -106,9 +106,18 @@ gulp.task("dependencies-css-fontawesome", function () {
         .pipe(gulp.dest("demos/libs/"));
 });
 
+gulp.task("dependencies-css-colorpicker", function () {
+    "use strict";
+    return gulp.src([
+        "node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css",
+        "node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css.map",
+    ])
+        .pipe(gulp.dest("demos/libs/"));
+});
+
 gulp.task("dependencies-css", function () {
     "use strict";
-    return gulp.start("dependencies-css-bootstrap", "dependencies-css-fontawesome");
+    return gulp.start("dependencies-css-bootstrap", "dependencies-css-fontawesome", "dependencies-css-colorpicker");
 });
 
 // Manage Font Dependencies
@@ -137,8 +146,8 @@ gulp.task("dependencies-js-bootstrap", function () {
     return gulp.src([
         "node_modules/bootstrap/dist/js/bootstrap.min.js",
         "node_modules/bootstrap/dist/js/bootstrap.min.js.map",
-        "node_modules/popper.js/dist/popper.min.js",
-        "node_modules/popper.js/dist/popper.min.js.map",
+        "node_modules/popper.js/dist/umd/popper.min.js",
+        "node_modules/popper.js/dist/umd/popper.min.js.map",
     ])
         .pipe(gulp.dest("demos/libs/"));
 });
@@ -152,8 +161,17 @@ gulp.task("dependencies-js-jquery", function () {
         .pipe(gulp.dest("demos/libs/"));
 });
 
+gulp.task("dependencies-js-colorpicker", function () {
+    "use strict";
+    return gulp.src([
+        "node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js",
+        "node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js.map"
+    ])
+        .pipe(gulp.dest("demos/libs/"));
+});
+
 gulp.task("dependencies-js", function () {
-    return gulp.start("dependencies-js-bootstrap", "dependencies-js-jquery", "dependencies-js-fontawesome");
+    return gulp.start("dependencies-js-bootstrap", "dependencies-js-jquery", "dependencies-js-fontawesome", "dependencies-js-colorpicker");
 });
 
 

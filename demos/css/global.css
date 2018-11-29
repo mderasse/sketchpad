@@ -41,9 +41,12 @@
     text-align: center;
     padding: 0px;
     margin: 0px;
+    cursor: pointer;
 }
 
-.sidebar > ul > li:hover {
+.sidebar > ul > li > .row > .col:hover,
+.sidebar > ul > li > .row > .button.active
+{
     background-color: #f8f8f8;
 }
 
@@ -51,10 +54,20 @@
     margin-top: 20px;
 }
 
+.colorpicker-input-addon:before {
+    width: 35px;
+    height: 30px;
+}
+
+.colorpicker-input-addon i {
+    width: 35px;
+    height: 30px;
+    display: block;
+}
+
 .sidebar > .color-squares > #color {
     position: absolute;
     left: 15px;
-    background-color: black;
     border: 1px solid #b3b3b3;
     width: 35px;
     height: 30px;
@@ -67,7 +80,6 @@
     position: absolute;
     left: 30px;
     margin-top: 15px;
-    background-color: white;
     border: 1px solid #b3b3b3;
     width: 35px;
     height: 30px;
@@ -79,6 +91,7 @@
     position: absolute;
     left: 53px;
     font-size: 11px;
+    cursor: pointer;
 }
 
 #sketchpad {
